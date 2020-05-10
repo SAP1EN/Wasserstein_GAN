@@ -9,6 +9,15 @@ Implementing the DCGAN (read more [here](https://arxiv.org/abs/1511.06434)) and 
 - [DCGAN](https://arxiv.org/abs/1511.06434)
 - [Improved WGAN](https://arxiv.org/pdf/1704.00028.pdf) 
 
+***
+### Features Implemented (in .ipynb):
+- DCGAN
+- Improved WGAN
+- Mask Cut & Interpolation
+- GAN Mathematical Formulations
+
+***
+
 With the exception that the improved WGAN will be using a gradient penalty as an alternative to clipping weights. This is to penalize the norm of gradient of the critic with respect to its input.
 ***
 An example of fake generated images after 5 epochs (all hyperparameters located below):
