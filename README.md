@@ -3,6 +3,12 @@
 Below I will be implementing the DCGAN (read more [here](https://arxiv.org/abs/1511.06434) and thereafter, I will be implementing the Wasserstein GAN (read more [here](https://arxiv.org/pdf/1704.00028.pdf)).
 First we define the generator and discriminator class for use in the DCGAN and the (improved) Wasserstein GAN:
 
+***
+### Papers Implemented:
+- [DCGAN](https://arxiv.org/abs/1511.06434)
+- [Improved WGAN](https://arxiv.org/pdf/1704.00028.pdf) 
+
+With the exception that the improved WGAN will be using a gradient penalty as an alternative to clipping weights. This is to penalize the norm of gradient of the critic with respect to its input.
 ```
 class Generator(nn.Module):
     def __init__(self):
