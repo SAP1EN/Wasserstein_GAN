@@ -110,4 +110,5 @@ Below we can implement the gradient penalty to penalize the norm of the gradient
 ***
 After defining our hyperparameters and our loss functions, we can begin training. For the Wasserstein GAN, we all want to track the 
 `Wasserstein distance` (as well as the `generator loss` and `discriminator loss`.
-[](https://github.com/atlascu/Wasserstein_GAN/blob/master/docs/imgs/wgan%20loss.png)
+
+![](https://github.com/atlascu/Wasserstein_GAN/blob/master/docs/imgs/wgan%20loss.png)
