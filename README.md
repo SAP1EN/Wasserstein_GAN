@@ -9,9 +9,41 @@ Below I will be implementing the DCGAN (read more [here](https://arxiv.org/abs/1
 
 With the exception that the improved WGAN will be using a gradient penalty as an alternative to clipping weights. This is to penalize the norm of gradient of the critic with respect to its input.
 ***
-An example of fake generated images :
+An example of fake generated images after 5 epochs:
 
 ![](https://github.com/atlascu/Wasserstein_GAN/blob/master/docs/imgs/dcgan.png)
+
+The hyperparameters are:
+```    
+# Number of workers for dataloader
+workers = 2
+# Batch size during training
+batch_size = 64
+# Spatial size of training images. All images will be resized to this
+#   size using a transform from torchvision.
+image_size = 64
+# Number of channels in the training images. For color images this is 3
+nc = 3
+# Size of z latent vector (i.e. size of generator input)
+nz = 100
+# Size of feature maps in generator
+ngf = 64
+# Size of feature maps in discriminator
+ndf = 64
+# Number of training epochs
+num_epochs = 5
+# Learning rate for optimizers
+lr = 0.0002
+# Beta1 hyperparam for Adam optimizers
+beta1 = 0.5
+# Beta2 hyperparam for Adam optimizers
+beta2 = 0.999
+# critic parameter as mentioned in WGAN paper
+n_critic = 5
+# lambda parameter for improved WGAN
+lamb = 10
+```
+*** 
 
 First we define the generator and discriminator class for use in the DCGAN and the (improved) Wasserstein GAN. We can re-use the same generator/discriminator classes for use in the improved Wasserstein GAN.
 ```
