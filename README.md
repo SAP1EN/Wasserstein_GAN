@@ -55,7 +55,7 @@ lamb = 10
 ```
 *** 
 
-First we define the generator and discriminator class for use in the DCGAN and the (improved) Wasserstein GAN. We can re-use the same generator/discriminator classes for use in the improved Wasserstein GAN.
+First we define the generator and discriminator class for use in the DCGAN and in the (improved) Wasserstein GAN.
 ```
 class Generator(nn.Module):
     def __init__(self):
@@ -97,7 +97,7 @@ class Discriminator(nn.Module):
         )
  ```
  
- Tracking the generator and discriminator loss over epochs (i.e. how they compete for the generator to learn):
+ Tracking the generator and discriminator loss over epochs (i.e. how they compete with each other for the generator to learn):
 ![](https://github.com/atlascu/Wasserstein_GAN/blob/master/docs/imgs/loss.png)
 
 ***
@@ -117,7 +117,7 @@ With the exception that the improved WGAN will be using a gradient penalty as an
     return gradient_penalty
 ```
 ***
-After defining our hyperparameters and our loss functions, we can begin training. For the Wasserstein GAN, we all want to track the 
+After defining our hyperparameters and our loss functions, we can begin training. For the Wasserstein GAN, we also want to track the 
 `Wasserstein distance` (as well as the `generator loss` and `discriminator loss`.
 
 ![](https://github.com/atlascu/Wasserstein_GAN/blob/master/docs/imgs/wgan%20loss.png)
