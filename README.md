@@ -2,7 +2,7 @@
 
 Implementing the DCGAN (read more [here](https://arxiv.org/abs/1511.06434)) and the Wasserstein GAN (read more [here](https://arxiv.org/pdf/1704.00028.pdf)) to generate fake celebrity images.
 
-> CelebA dataset located [here](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html).
+> CelebA dataset containing 200K celebrity images, each with 40 attribute annotations located [here](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html).
 
 ***
 ### Papers Implemented:
