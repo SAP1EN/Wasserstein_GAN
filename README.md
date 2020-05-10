@@ -118,6 +118,6 @@ With the exception that the improved WGAN will be using a gradient penalty as an
 ```
 ***
 After defining our hyperparameters and our loss functions, we can begin training. For the Wasserstein GAN, we also want to track the 
-`Wasserstein distance` (as well as the `generator loss` and `discriminator loss`.
+`Wasserstein distance` (as well as the `generator loss` and `discriminator loss`).
 
 ![](https://github.com/atlascu/Wasserstein_GAN/blob/master/docs/imgs/wgan%20loss.png)
