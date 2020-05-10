@@ -9,6 +9,8 @@ First we define the generator and discriminator class for use in the DCGAN and t
 - [Improved WGAN](https://arxiv.org/pdf/1704.00028.pdf) 
 
 With the exception that the improved WGAN will be using a gradient penalty as an alternative to clipping weights. This is to penalize the norm of gradient of the critic with respect to its input.
+***
+We can re-use the same generator/discriminator classes for use in the improved Wasserstein GAN.
 ```
 class Generator(nn.Module):
     def __init__(self):
@@ -49,7 +51,7 @@ class Discriminator(nn.Module):
             nn.Conv2d(args.ndf * 8, 1, 4, 1, 0, bias=False)
         )
  ```
- We can re-use the same generator/discriminator classes for use in the improved Wasserstein GAN, where the main difference is that we use calculate the gradient penalty.
+Below we can implement the gradient penalty to penalize the norm of the gradient (with respect to its input).
  > **Note:** Adding the gradient penalty will make the model train with far longer times:
  
  ```
