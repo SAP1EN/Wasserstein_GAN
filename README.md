@@ -1,7 +1,6 @@
 <h1 align = "center"> DCGAN and Wasserstein GAN Implementation </h1>
 
-Below I will be implementing the DCGAN (read more [here](https://arxiv.org/abs/1511.06434) and thereafter, I will be implementing the Wasserstein GAN (read more [here](https://arxiv.org/pdf/1704.00028.pdf)).
-First we define the generator and discriminator class for use in the DCGAN and the (improved) Wasserstein GAN:
+Below I will be implementing the DCGAN (read more [here](https://arxiv.org/abs/1511.06434)) and thereafter, I will be implementing the Wasserstein GAN (read more [here](https://arxiv.org/pdf/1704.00028.pdf)).
 
 ***
 ### Papers Implemented:
@@ -10,11 +9,11 @@ First we define the generator and discriminator class for use in the DCGAN and t
 
 With the exception that the improved WGAN will be using a gradient penalty as an alternative to clipping weights. This is to penalize the norm of gradient of the critic with respect to its input.
 ***
-An example of fake generated images:
+An example of fake generated images :
 
 ![](https://github.com/atlascu/Wasserstein_GAN/blob/master/docs/imgs/dcgan.png)
 
-We can re-use the same generator/discriminator classes for use in the improved Wasserstein GAN.
+First we define the generator and discriminator class for use in the DCGAN and the (improved) Wasserstein GAN. We can re-use the same generator/discriminator classes for use in the improved Wasserstein GAN.
 ```
 class Generator(nn.Module):
     def __init__(self):
