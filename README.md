@@ -13,6 +13,8 @@ An example of fake generated images after 5 epochs (all hyperparameters located 
 
 ![](https://github.com/atlascu/Wasserstein_GAN/blob/master/docs/imgs/dcgan.png)
 
+***
+
 Where the full list of the hyperparameters are (note that `n_critic` and `lamb` are only for the WGAN):
 ```    
 # Number of workers for dataloader
