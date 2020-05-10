@@ -17,9 +17,6 @@ Implementing the DCGAN (read more [here](https://arxiv.org/abs/1511.06434)) and 
 - GAN Mathematical Formulations
 
 ***
-
-With the exception that the improved WGAN will be using a gradient penalty as an alternative to clipping weights. This is to penalize the norm of gradient of the critic with respect to its input.
-***
 An example of fake generated images after 5 epochs (all hyperparameters located below):
 
 ![](https://github.com/atlascu/Wasserstein_GAN/blob/master/docs/imgs/dcgan.png)
@@ -104,8 +101,7 @@ class Discriminator(nn.Module):
 ![](https://github.com/atlascu/Wasserstein_GAN/blob/master/docs/imgs/loss.png)
 
 ***
-
-Below we can implement the gradient penalty to penalize the norm of the gradient (with respect to its input).
+With the exception that the improved WGAN will be using a gradient penalty as an alternative to clipping weights. This is to penalize the norm of gradient of the critic with respect to its input.
  > **Note:** Adding the gradient penalty will make the model train with far longer times:
  
  ```
