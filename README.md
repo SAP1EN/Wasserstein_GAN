@@ -9,11 +9,11 @@ Implementing the DCGAN (read more [here](https://arxiv.org/abs/1511.06434)) and 
 
 With the exception that the improved WGAN will be using a gradient penalty as an alternative to clipping weights. This is to penalize the norm of gradient of the critic with respect to its input.
 ***
-##### An example of fake generated images after 5 epochs (all hyperparameters located below):
+An example of fake generated images after 5 epochs (all hyperparameters located below):
 
 ![](https://github.com/atlascu/Wasserstein_GAN/blob/master/docs/imgs/dcgan.png)
 
-##### Where the full list of the hyperparameters are (note that `n_critic` and `lamb` are only for the WGAN):
+Where the full list of the hyperparameters are (note that `n_critic` and `lamb` are only for the WGAN):
 ```    
 # Number of workers for dataloader
 workers = 2
