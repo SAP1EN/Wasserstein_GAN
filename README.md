@@ -1,6 +1,6 @@
 <h1 align = "center"> DCGAN and Wasserstein GAN Implementation </h1>
 
-Below I will be implementing the DCGAN (read more [here](https://arxiv.org/abs/1511.06434)) and the Wasserstein GAN (read more [here](https://arxiv.org/pdf/1704.00028.pdf)).
+Implementing the DCGAN (read more [here](https://arxiv.org/abs/1511.06434)) and the Wasserstein GAN (read more [here](https://arxiv.org/pdf/1704.00028.pdf)) to generate fake celebrity images.
 
 ***
 ### Papers Implemented:
