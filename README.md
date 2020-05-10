@@ -9,7 +9,7 @@ Below I will be implementing the DCGAN (read more [here](https://arxiv.org/abs/1
 
 With the exception that the improved WGAN will be using a gradient penalty as an alternative to clipping weights. This is to penalize the norm of gradient of the critic with respect to its input.
 ***
-An example of fake generated images after 5 epochs:
+An example of fake generated images after 5 epochs (all hyperparameters located below):
 
 ![](https://github.com/atlascu/Wasserstein_GAN/blob/master/docs/imgs/dcgan.png)
 
@@ -101,3 +101,7 @@ Below we can implement the gradient penalty to penalize the norm of the gradient
     gradient_penalty = ((gradients.norm(2, dim=1) - 1) ** 2).mean() * args.lamb
     return gradient_penalty
 ```
+***
+After defining our hyperparameters and our loss functions, we can begin training. For the Wasserstein GAN, we all want to track the 
+`Wasserstein distance` (as well as the `generator loss` and `discriminator loss`.
+~[](https://github.com/atlascu/Wasserstein_GAN/blob/master/docs/imgs/wgan%20loss.png)
