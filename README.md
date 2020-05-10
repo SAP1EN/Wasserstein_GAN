@@ -10,6 +10,10 @@ First we define the generator and discriminator class for use in the DCGAN and t
 
 With the exception that the improved WGAN will be using a gradient penalty as an alternative to clipping weights. This is to penalize the norm of gradient of the critic with respect to its input.
 ***
+An example of fake generated images:
+
+![](https://github.com/atlascu/Wasserstein_GAN/blob/master/docs/imgs/dcgan.png)
+
 We can re-use the same generator/discriminator classes for use in the improved Wasserstein GAN.
 ```
 class Generator(nn.Module):
